@@ -6,6 +6,7 @@ import { todoReducer } from './todos/todo.reducer';
 
 import { AppComponent } from './app.component';
 import { TodoModule } from './todos/todo.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { environment } from 'src/environments/environment';
 
@@ -17,6 +18,7 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     TodoModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({ todos: todoReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
